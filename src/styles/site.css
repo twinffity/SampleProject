@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,500,700");
+/*---DEVICE SIZES---*/
+/*---COLORS---*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.hidden {
+  display: none !important; }
+
+@media only screen and (min-width: 320px) {
+  .hidden-xs-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 480px) {
+  .hidden-sm-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) {
+  .hidden-md-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 960px) {
+  .hidden-lg-up {
+    display: none !important; } }
+
+@media only screen and (max-width: 479px) {
+  .hidden-xs-down {
+    display: none !important; } }
+
+@media only screen and (max-width: 767px) {
+  .hidden-sm-down {
+    display: none !important; } }
+
+@media only screen and (max-width: 959px) {
+  .hidden-md-down {
+    display: none !important; } }
+
+@media only screen and (max-width: 1279px) {
+  .hidden-lg-down {
+    display: none !important; } }
+
+h1, h2 {
+  font-weight: 100; }
+
+h3, h4, h5, h6 {
+  font-weight: 300; }
+
+body {
+  background-image: url("../resources/background-2.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+  color: #DFDCE3;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 99vh;
+  font-weight: 300; }
+
+header {
+  background-color: #FC4A1A;
+  background-color: rgba(252, 74, 26, 0.85);
+  background: linear-gradient(to bottom, rgba(252, 74, 26, 0.85) 70%, rgba(252, 74, 26, 0.95) 100%);
+  box-shadow: 2px 2px 1px #565656;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0; }
+  header h1 {
+    margin: 0; }
+  @media only screen and (min-width: 320px) {
+    header {
+      padding: 10px; } }
+  @media only screen and (min-width: 960px) {
+    header {
+      padding: 10px 15px; } }
+  @media only screen and (min-width: 1280px) {
+    header {
+      padding: 10px 20px; } }
+
+main {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: rgba(74, 189, 172, 0.6);
+  background: radial-gradient(ellipse at center, rgba(74, 189, 172, 0.85) 5%, rgba(86, 86, 86, 0.65) 85%);
+  padding: 40px 0 10px 0; }
+  @media only screen and (min-width: 480px) {
+    main {
+      padding: 60px 0 10px 0; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+nav {
+  background-color: rgba(247, 183, 51, 0.9); }
+  nav:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    height: 5px;
+    background-color: rgba(223, 220, 227, 0.5); }
+  nav.loader:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(223, 220, 227, 0) 0%, rgba(74, 189, 172, 0.75) 50%, rgba(223, 220, 227, 0) 100%);
+    animation: 1.5s loaderScroll infinite; }
+  nav .nav-button {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center; }
+    nav .nav-button a {
+      color: #565656;
+      text-decoration: none;
+      display: block;
+      box-sizing: border-box; }
+      nav .nav-button a:hover, nav .nav-button a:active, nav .nav-button a.pushed {
+        background-color: rgba(252, 74, 26, 0.9);
+        color: #DFDCE3; }
+    nav .nav-button + .nav-button a {
+      border-left: 1px solid #565656; }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  @media only screen and (min-width: 320px) {
+    nav .toggle-menu-button {
+      box-shadow: 1px 1px 1px #565656; }
+    nav li {
+      display: block; }
+    nav .nav-button a {
+      padding: 5px 10px;
+      font-size: 1.25rem; } }
+  @media only screen and (min-width: 480px) {
+    nav ul {
+      display: flex; }
+    nav li {
+      flex: 1 1 20%; }
+    nav .nav-button a {
+      padding: 9px 12px; } }
+  @media only screen and (min-width: 768px) {
+    nav .nav-button a {
+      padding: 9px 15px; } }
+  @media only screen and (min-width: 960px) {
+    nav .nav-button a {
+      padding: 12px 18px;
+      font-size: 1.375rem; } }
+  @media only screen and (min-width: 1280px) {
+    nav .nav-button a {
+      padding: 15px 20px;
+      font-size: 1.5rem; } }
+
+.full-page-info h2 {
+  margin: 1rem 0;
+  font-weight: 400; }
+
+.full-page-info h4 {
+  margin: 0.75rem 0; }
+
+@media only screen and (min-width: 320px) {
+  .full-page-info {
+    padding: 10px 40px; }
+    .full-page-info h2 {
+      font-size: 1.75rem; } }
+
+@media only screen and (min-width: 480px) {
+  .full-page-info {
+    padding: 20px 60px; }
+    .full-page-info h2 {
+      font-size: 2rem; } }
+
+@media only screen and (min-width: 768px) {
+  .full-page-info {
+    padding: 25px 90px; }
+    .full-page-info h2 {
+      font-size: 2.25rem; } }
+
+@media only screen and (min-width: 960px) {
+  .full-page-info {
+    padding: 30px 120px; }
+    .full-page-info h2 {
+      font-size: 2.5rem; } }
+
+@media only screen and (min-width: 1280px) {
+  .full-page-info {
+    padding: 40px 150px; }
+    .full-page-info h2 {
+      font-size: 3rem; } }
+
+.hexagonal-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgba(247, 183, 51, 0.9);
+  color: #565656;
+  text-transform: uppercase; }
+  .hexagonal-button:hover, .hexagonal-button:active {
+    background-color: rgba(252, 74, 26, 0.9);
+    color: #DFDCE3; }
+  @media only screen and (min-width: 320px) {
+    .hexagonal-button {
+      padding: 10px; } }
+  @media only screen and (min-width: 768px) {
+    .hexagonal-button {
+      padding: 12px; } }
+  @media only screen and (min-width: 960px) {
+    .hexagonal-button {
+      padding: 15px; } }
+
+@keyframes loaderScroll {
+  from {
+    left: -100%; }
+  to {
+    left: 100%; } }

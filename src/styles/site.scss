@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,700');
+/*---DEVICE SIZES---*/
+$xs-width: 320px;
+$sm-width: 480px;
+$md-width: 768px;
+$lg-width: 960px;
+$xl-width: 1280px;
+
+// TEMPLATE FOR MEDIA QUERY
+@media only screen and (min-width : $xs-width) {
+}
+@media only screen and (min-width : $sm-width) {
+}
+@media only screen and (min-width : $md-width) {
+}
+@media only screen and (min-width : $lg-width) {
+}
+@media only screen and (min-width : $xl-width) {
+}
+
+/*---COLORS---*/
+$grain: #D7CEC7;
+$blackboard: #565656;
+$oxblood: #76323F;
+$tan: #C09F80;
+
+$dusty: #96858F;
+$lavendar: #6D7993;
+$overcast: #9099A2;
+$paper: #D5D5D5;
+$lightpaper: #EAEAEA;
+
+$fresh: #4ABDAC;
+$vermillion: #FC4A1A;
+$sunshine: #F7B733;
+$clean: #DFDCE3;
+
+$color-1: $fresh;
+$color-2: $vermillion;
+$color-3: $sunshine;
+$color-4: $clean;
+$color-5: $blackboard;
+$color-6: $lightpaper;
+
+$helvetica: "Roboto", sans-serif;
+
+// UTILITIES
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.hidden {
+    display: none !important;
+}
+@media only screen and (min-width : $xs-width) {
+    .hidden-xs-up{
+        display: none !important;
+    }
+}
+@media only screen and (min-width : $sm-width) {
+    .hidden-sm-up{
+        display: none !important;
+    }
+}
+@media only screen and (min-width : $md-width) {
+    .hidden-md-up{
+        display: none !important;
+    }
+}
+@media only screen and (min-width : $lg-width) {
+    .hidden-lg-up{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width : $sm-width - 1) {
+    .hidden-xs-down{
+        display: none !important;
+    }
+}
+@media only screen and (max-width : $md-width - 1) {
+    .hidden-sm-down{
+        display: none !important;
+    }
+}
+@media only screen and (max-width : $lg-width - 1) {
+    .hidden-md-down{
+        display: none !important;
+    }
+}
+@media only screen and (max-width : $xl-width - 1) {
+    .hidden-lg-down{
+        display: none !important;
+    }
+}
+
+h1, h2{
+    font-weight: 100;
+}
+ h3, h4, h5, h6{
+     font-weight: 300;
+ }
+body {
+    background-image: url('../resources/background-2.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+    color: $color-4;
+    margin: 0;
+    font-family: $helvetica;
+    height: 99vh;
+    font-weight: 300;
+}
+
+header{
+    background-color: $color-2;
+    background-color: rgba($color-2, 0.85);
+    background: linear-gradient(to bottom, rgba($color-2, 0.85) 70%, rgba($color-2, 0.95) 100%);
+    box-shadow: 2px 2px 1px $color-5;
+    position: absolute;
+    top:0;
+    right:0;
+    left: 0;
+
+    h1{
+        margin: 0;
+    }
+    @media only screen and (min-width : $xs-width) {
+        padding: 10px;
+    }
+    @media only screen and (min-width : $sm-width) {
+    }
+    @media only screen and (min-width : $md-width) {
+    }
+    @media only screen and (min-width : $lg-width) {
+        padding: 10px 15px;
+    }
+    @media only screen and (min-width : $xl-width) {
+        padding: 10px 20px;
+    }
+}
+
+main{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: rgba($color-1, 0.6);
+    background: radial-gradient(ellipse at center, rgba($color-1, 0.85) 5%, rgba($color-5, 0.65) 85%);
+    padding: 40px 0 10px 0;
+
+    @media only screen and (min-width : $xs-width) {
+    }
+    @media only screen and (min-width : $sm-width) {
+        padding: 60px 0 10px 0;
+    }
+    @media only screen and (min-width : $md-width) {
+    }
+    @media only screen and (min-width : $lg-width) {
+    }
+    @media only screen and (min-width : $xl-width) {
+    }
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+nav{
+    background-color: rgba($color-3, 0.9);
+    
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left:0;
+        right:0;
+        top:-5px;
+        height: 5px;
+        background-color: rgba($color-4, 0.5);
+    }
+    &.loader:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:-5px;
+        height: 5px;
+        width: 100%;
+        background: linear-gradient(to right, rgba($color-4, 0) 0%,  rgba($color-1, 0.75) 50%,  rgba($color-4, 0) 100%);
+        animation: 1.5s loaderScroll infinite;
+    }
+
+    .nav-button{
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        a{
+            color: $color-5;
+            text-decoration: none;
+            display: block;
+            box-sizing: border-box;
+
+            &:hover, &:active, &.pushed {
+                background-color: rgba($color-2, 0.9);
+                color: $color-4;
+            }
+        }
+
+        & + .nav-button a{
+            border-left: 1px solid $color-5;
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        padding:0;
+        margin: 0;
+    }
+
+    @media only screen and (min-width : $xs-width) {
+        .toggle-menu-button{
+            box-shadow: 1px 1px 1px $color-5;
+        }
+        li{
+            display: block;
+        }
+        .nav-button{
+            a{
+                padding: 5px 10px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+    @media only screen and (min-width : $sm-width) {
+        ul{
+            display: flex;
+        }
+        li{
+            flex: 1 1 20%;
+        }
+        .nav-button{
+            a{
+                padding: 9px 12px;
+            }
+        }
+    }
+    @media only screen and (min-width : $md-width) {
+        .nav-button{
+            a{
+                padding: 9px 15px;
+            }
+        }
+    }
+    @media only screen and (min-width : $lg-width) {
+        .nav-button{
+            a{
+                padding: 12px 18px;
+                font-size: 1.375rem;
+            }
+        }
+    }
+    @media only screen and (min-width : $xl-width) {
+        .nav-button{
+            a{
+                padding: 15px 20px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.full-page-info{
+    h2{
+        margin: 1rem 0;
+        font-weight: 400;
+    }
+    h4{
+        margin: 0.75rem 0;
+    }
+    @media only screen and (min-width : $xs-width) {
+        padding: 10px 40px;
+        h2 {
+            font-size: 1.75rem;
+        }
+    }
+    @media only screen and (min-width : $sm-width) {
+        padding: 20px 60px;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (min-width : $md-width) {
+        padding: 25px 90px;
+        h2 {
+            font-size: 2.25rem;
+        }
+    }
+    @media only screen and (min-width : $lg-width) {
+        padding: 30px 120px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    @media only screen and (min-width : $xl-width) {
+        padding: 40px 150px;
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+.hexagonal-button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba($color-3, 0.9);
+    color: $color-5;
+    text-transform: uppercase;
+
+    &:hover, &:active{
+        background-color: rgba($color-2, 0.9);
+        color: $color-4;
+    }
+
+    @media only screen and (min-width : $xs-width) {
+        padding: 10px;
+    }
+    @media only screen and (min-width : $sm-width) {
+    }
+    @media only screen and (min-width : $md-width) {
+        padding: 12px;
+    }
+    @media only screen and (min-width : $lg-width) {
+        padding: 15px;
+    }
+    @media only screen and (min-width : $xl-width) {
+    }
+}
+
+// CSS ANIMATIONS
+@keyframes loaderScroll {
+  from {
+      left: -100%;
+  }
+
+  to {
+      left:100%;
+  }
+}
