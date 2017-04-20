@@ -54,6 +54,7 @@ body {
   background-image: url("../resources/background-2.jpg");
   background-size: cover;
   background-position-y: bottom;
+  overflow-x: hidden;
   color: #DFDCE3;
   margin: 0;
   font-family: "Roboto", sans-serif;
